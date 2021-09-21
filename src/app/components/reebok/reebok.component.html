@@ -1,0 +1,20 @@
+<div class="content">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col animated fadeIn fast" *ngFor="let reebok of reebok; let i = index">
+            <div class="card h-100">
+                <img [src]="reebok.img" class="card-img-top" [alt]="reebok.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">{{reebok.nombre}}</h5>
+                    <p class="card-text"> ${{reebok.value}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">{{reebok.marca}}</small>
+                </div>
+                <button (click)="verReebok(i);" class="btn btn-outline-primary">Ver más......</button>
+                <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">ver más..</a> -->
+            </div>
+        </div>
+    </div>
+
+</div>
